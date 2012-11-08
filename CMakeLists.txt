@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(v8)
 
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
+#SET(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
 INCLUDE(ParseArguments)
 FUNCTION(JS2C_GEN)
 
@@ -252,7 +252,7 @@ endif(WIN32)
 add_library(preparser_lib ${PREPARSER_SRC})
 
 
-add_library(v8 src/v8dll-main.cc)
+add_library(v8 SHARED src/v8dll-main.cc src/api.cc)
 target_link_libraries(v8 v8_base v8_snapshot)
 
 
