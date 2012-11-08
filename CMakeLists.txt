@@ -183,7 +183,10 @@ include_directories(src)
 add_library(v8_base STATIC ${V8_BASE_SRC})
 
 JS2C_GEN(
-  JSFILES src/runtime.js src/v8natives.js src/array.js src/string.js src/uri.js src/math.js src/messages.js src/apinatives.js src/debug-debugger.js src/mirror-debugger.js src/liveedit-debugger.js src/date.js src/json.js src/regexp.js src/macros.py
+  JSFILES src/runtime.js src/v8natives.js src/array.js src/string.js
+  src/uri.js src/math.js src/messages.js src/apinatives.js
+  src/debug-debugger.js src/mirror-debugger.js src/liveedit-debugger.js
+  src/date.js src/json.js src/regexp.js src/macros.py
   GTYPE CORE
   CPP_FILE libraries.cc
 )
