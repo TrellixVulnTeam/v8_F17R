@@ -22,9 +22,10 @@ d8
 d8_g
 shell
 shell_g
-/build/Debug
-/build/gyp
-/build/Release
+/old_build/Debug
+/old_build/gyp
+/old_build/Release
+build/
 /obj
 /out
 /test/cctest/cctest.status2
